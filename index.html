@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1a1a2e;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .title {
+      position: absolute;
+      top: 30px;
+      color: #fffbae;
+      font-size: 5em;  
+      font-family: 'Bubblegum Sans', cursive;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+
+    .title.hidden {
+      opacity: 0;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 1.5s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.3; }
+    }
+
+    .envelope {
+      position: relative;
+      width: 600px;  
+      height: 350px;  
+      background: #fffbae;  
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      box-shadow: 0 4px 15px rgba(230, 230, 250, 0.3);
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 240px;  
+      background: #ffb1ca;  
+      clip-path: polygon(0 0, 50% 70%, 100% 0);
+      transform-origin: top;
+      transition: transform 0.5s;
+      z-index: 2;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .envelope.open .envelope-flap {
+      transform: rotateX(180deg);
+    }
+
+    .heart {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 70px; 
+      z-index: 3;
+      cursor: pointer;
+      transition: transform 0.3s;
+      user-select: none;
+    }
+
+    .heart:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .letter {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      width: 950px;  
+      padding: 25px;  
+      background: #fff;
+      border-radius: 15px;
+      text-align: center;
+      transform: translate(-50%, 100%);
+      opacity: 0;
+      transition: all 0.5s;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;  
+      color: #c6a917; 
+      line-height: 1.6;
+    }
+
+    .envelope.open .letter {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    .floating-heart {
+      position: absolute;
+      font-size: 20px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .photo {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.8s ease;
+    z-index: 9;
+    border: 3px solid white;
+    opacity: 0;
+    }
+
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        opacity: 1;
+        
+    }
+
+    .photo1 {
+        top: 30px; 
+        left: 40px; 
+        transform: rotate(-5deg); 
+        opacity: 0;
+    }
+
+    .photo2 {
+        bottom: 30px; 
+        right: 40px;
+        transform: rotate(5deg);
+        opacity: 0; 
+    }
+
+    .envelope.open .photo1 {
+        opacity: 1; 
+        transition: fade 0.3s
+    }
+
+    .envelope.open .photo2 {
+        opacity: 1;
+        transition: fade 0.3s
+    }
+
+  </style>
+</head>
+<body>
+  <h1 class="title">Heyya Vaish!!!</h1>
+  
+  <div class="envelope">
+    <div class="envelope-flap"></div>
+    <div class="heart">❤️</div>
+    <div class="photo photo1">
+      <img src="vaish1.jpg" alt="First photo">
+    </div>
+    <div class="photo photo2">
+      <img src="vaish2.jpg" alt="Second photo">
+    </div>
+    <div class="letter">
+      <p>Dear Vaishnavi,</p>
+    
+      <p> 
+
+        It’s crazy how life works, isn’t it? We were in the same school for so long yet it took HMUN for us to truly connect. And now I can’t imagine my life without you in it. I don’t even know exactly when it happened but somewhere between committee sessions, endless conversations and shared moments of excitement (and maybe stress) we just *clicked*. And I’m so, so glad we did.  
+        
+        You are genuinely one of the sweetest, kindest and most wonderful people I’ve ever met. There’s a warmth in the way you care for people, a softness in the way you listen and a quiet strength in everything you do. You have this way of making the people around you feel valued, seen and understood and that’s something truly rare. I feel so lucky to have found a friend like you even if it took us way too long to get here.  
+        
+        But beyond all that I know you have dreams—big, beautiful dreams that deserve to be chased without hesitation. And you have everything it takes to turn them into reality. So go after them with zeal and determination. And when life gets tough (because it will sometimes) just remember that you are more than capable and you have people (me included) who will always be cheering you on.   
+        
+        And listen don’t even think about disappearing. I don’t care how busy life gets, you have to keep in touch or I will find you, dramatically flip my dupatta and demand a full life update. So let’s not make it come to that okay? By the way, I'll never be not amazed by your ability to fall asleep anytime, anywhere. Literally your superpower lmaoo.    
+        
+        
+        
+        </p>
+        
+      <p>I'll miss you. I love you. Thank you for existing. Thank you for being you.</p>
+      <p>❤️</p>
+    </div>
+  </div>
+
+  <script>
+    function createStars() {
+      for (let i = 0; i < 50; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width;
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.animationDelay = Math.random() * 1.5 + 's';
+        document.body.appendChild(star);
+      }
+    }
+
+    function createFloatingHeart(x, y) {
+      const heart = document.createElement('div');
+      heart.className = 'floating-heart';
+      heart.textContent = '❤️';
+      heart.style.left = x + 'px';
+      heart.style.top = y + 'px';
+      document.body.appendChild(heart);
+
+      const angle = Math.random() * Math.PI * 2;
+      const velocity = 4;
+      const vx = Math.cos(angle) * velocity;
+      const vy = Math.sin(angle) * velocity;
+
+      let posX = x;
+      let posY = y;
+
+      function animate() {
+        posX += vx;
+        posY += vy - 1.5;
+        heart.style.left = posX + 'px';
+        heart.style.top = posY + 'px';
+        heart.style.transform = `rotate(${posX}deg)`;
+
+        if (posY > -50) {
+          requestAnimationFrame(animate);
+        } else {
+          heart.remove();
+        }
+      }
+
+      animate();
+    }
+    
+    createStars();
+
+    const title = document.querySelector('.title');
+    const envelope = document.querySelector('.envelope');
+    const heart = document.querySelector('.heart');
+
+    heart.addEventListener('click', (e) => {
+      e.stopPropagation();
+      envelope.classList.add('open');
+      title.classList.add('hidden');
+      
+      for (let i = 0; i < 12; i++) {
+        setTimeout(() => {
+          createFloatingHeart(
+            e.pageX + (Math.random() - 0.5) * 40,
+            e.pageY + (Math.random() - 0.5) * 40
+          );
+        }, i * 100);
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (envelope.classList.contains('open')) {
+        envelope.classList.remove('open');
+        setTimeout(() => {
+          title.classList.remove('hidden');
+        }, 500); 
+      }
+    });
+  </script>
+</body>
+</html>
